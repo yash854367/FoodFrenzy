@@ -6,8 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import entities.Admin;
+import entities.Orders;
+import entities.Product;
+import entities.User;
+import loginCredentials.AdminLogin;
+import services.AdminServices;
+import services.OrderServices;
+import services.ProductServices;
 
 @Controller
 public class AdminController {
