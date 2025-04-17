@@ -24,6 +24,15 @@ public class AdminServices {
 		return admin;
 	}
 	
+	public void update(Admin admin, int id) {
+		for(Admin ad : getAll()) {
+			if(ad.getAdminId()==id) {
+				this.adminRepository.save(admin);
+			}
+		}
+			
+	}
+	
 	public void delete(int id) {
 		this.adminRepository.deleteById(id);
 	}
